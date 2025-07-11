@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/common/navbar";
+import { Footer } from "@/components/common/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,12 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased w-full max-w-screen h-full`}
+        className={`${inter.className} antialiased w-full max-w-screen h-full `}
       >
         <main className="w-full mx-auto max-w-screen-xl px-4">
           <Navbar />
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

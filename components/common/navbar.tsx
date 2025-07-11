@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export const Navbar = () => {
   return (
-    <header className="w-full max-w-screen-xl py-3 flex items-center justify-between">
+    <header className="w-full max-w-screen-xl py-5 flex items-center justify-between">
       <h1>InsightEdge</h1>
       <nav className="w-fit">
         <ul className="flex gap-3 items-center justify-center ">
@@ -12,7 +12,7 @@ export const Navbar = () => {
           <li>Posts</li>
         </ul>
       </nav>
-      <div className="flex items-center gap-3 justify-center w-fit">
+      <div className="md:flex items-center gap-3 justify-center w-fit hidden">
         <Button variant={"secondary"}>Sign in</Button>
         <Button variant={"default"}>Register</Button>
       </div>
