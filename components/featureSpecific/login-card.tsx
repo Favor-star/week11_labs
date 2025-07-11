@@ -23,14 +23,14 @@ export function LoginCard() {
         <LoginForm />
       </CardContent>
       <CardFooter className="flex-col gap-2 ">
-        <div className="flex flex-row w-full items-center gap-2">
+        {/* <div className="flex flex-row w-full items-center gap-2">
           <Button variant="outline" className="flex-1">
             Login with Google
           </Button>
           <Button variant="outline" className="flex-1">
             Login with Github
           </Button>
-        </div>
+        </div> */}
         <Link href={"/register"}>
           <Button variant={"link"}>Don&apos;'t have an account? Sign up</Button>
         </Link>
