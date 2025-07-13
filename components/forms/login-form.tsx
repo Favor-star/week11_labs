@@ -15,7 +15,7 @@ export const LoginForm = () => {
     register,
     handleSubmit,
     setError,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
   } = useForm<LoginSchemaProps>({
     resolver: zodResolver(loginSchema),
   });
@@ -33,7 +33,6 @@ export const LoginForm = () => {
       return;
     }
     router.push("/");
-    console.log(result);
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

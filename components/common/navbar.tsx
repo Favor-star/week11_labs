@@ -2,21 +2,22 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { auth } from "@/auth";
-import { LogOut } from "lucide-react";
 import { SignOutButton } from "./sign-out";
 
 export const Navbar = async () => {
   const session = await auth();
-  console.log(session?.user);
 
   return (
     <header className="w-full max-w-screen-xl py-5 flex items-center justify-between">
-      <h1>InsightEdge</h1>
+      <h1 className="text-xl md:text-2xl font-black ">InsightEdge</h1>
       <nav className="w-fit">
-        <ul className="flex gap-3 items-center justify-center ">
-          <li>Home</li>
-          <li>About</li>
-          <li>Posts</li>
+        <ul className="md:flex gap-3 items-center justify-center hidden ">
+          <Link href={"/"}>
+            <li>Home</li>
+          </Link>
+          <Link href={"/about"}>
+            <li>About</li>
+          </Link>
         </ul>
       </nav>
       {!session && (
