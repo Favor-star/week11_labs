@@ -15,8 +15,8 @@ export const PostCard: FC<{ post: apiDataProps }> = ({ post }) => {
   const { title, slug, cover_image, tag_list, social_image, user, created_at } =
     post;
   return (
-    <Link href={`/post/${slug}`}>
-      <Card className="w-full shadow-none ">
+    <Link href={`/post/${slug}`} className="w-full h-full">
+      <Card className="w-full h-full shadow-none ">
         <CardContent className="w-full relative">
           <Image
             src={cover_image || social_image || PlaceholderImage}

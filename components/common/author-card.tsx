@@ -20,8 +20,8 @@ export const AuthorCard: FC<Pick<apiDataProps, "user" | "created_at">> = ({
         className="rounded-full"
       />
       {/* <User size={30} className="rounded-full border border-foreground" /> */}
-      <p className="text-base text-black/70 font-bold">{user.name}</p>
-      <p className="text-sm text-black/70">
+      <p className="text-base text-foreground/70 font-bold">{user.name}</p>
+      <p className="text-sm text-foreground/70">
         {new Date(created_at).toLocaleString()}
       </p>
     </div>

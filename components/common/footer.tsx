@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-gray-100 px-4 mt-10 ">
+    <footer className="w-full bg-secondary px-4 mt-10 ">
       <section className="w-full max-w-screen-xl mx-auto flex flex-col gap-5 md:flex-row  items-start justify-start md:justify-between py-10">
         <div className="w-full ">
           <h1 className="text-xl font-semibold">About us</h1>
@@ -29,10 +30,14 @@ export const Footer = () => {
           <h1 className="text-xl font-semibold">Join us Now</h1>
           <p>Join our weekly newspaper</p>
           <div className="w-full flex flex-col gap-3 md:flex-row items-center ">
-            <Button variant={"outline"} className="flex-1 w-full">
-              Sign In
-            </Button>
-            <Button className="flex-1 w-full">Rgister</Button>
+            <Link href={"/login"}>
+              <Button variant={"outline"} className="flex-1 w-full">
+                Sign In
+              </Button>
+            </Link>
+            <Link href={"/register"}>
+              <Button className="flex-1 w-full">Rgister</Button>
+            </Link>
           </div>
         </div>
       </section>

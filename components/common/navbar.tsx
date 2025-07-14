@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { auth } from "@/auth";
 import { SignOutButton } from "./sign-out";
+import { ModeToggle } from "./theme-toggle";
 
 export const Navbar = async () => {
   const session = await auth();
@@ -36,6 +37,7 @@ export const Navbar = async () => {
           <Link href={"/dashboard"}>
             <Button>Dashboard</Button>
           </Link>
+          <ModeToggle />
         </div>
       )}
     </header>

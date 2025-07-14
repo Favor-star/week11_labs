@@ -9,7 +9,7 @@ export const PostImage: FC<{
     <div className="w-full min-h-[400px] h-full relative mt-3">
       <Image
         src={cover_image || social_image || PlaceholderImage}
-        alt="Text hero image"
+        alt="Post's hero image"
         fill
         className="rounded-xl object-cover  shadow-lg"
         placeholder="blur"
